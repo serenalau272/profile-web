@@ -6,6 +6,7 @@ interface SidebarProps {
     isOpen: boolean;
     toggle: () => void;
 }
+
 const Sidebar: React.FC<SidebarProps> = ({
     isOpen,
     toggle

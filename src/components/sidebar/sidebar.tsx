@@ -1,7 +1,6 @@
-import styled, {StyledFunction} from 'styled-components'
+import styled from 'styled-components'
 import {FaTimes} from 'react-icons/fa'
 import {Link as LinkS} from 'react-router-dom'
-import React from 'react'
 
 export interface SidebarContainerProps {
     isOpen: boolean;

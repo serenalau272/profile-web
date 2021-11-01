@@ -1,6 +1,5 @@
 import React from 'react'
-import { FaToggleOff } from 'react-icons/fa'
-import {SidebarContainer, Icon, CloseIcon, SidebarWrapper, SidebarMenu, SidebarLink, SidebarContainerProps} from './sidebar'
+import {SidebarContainer, Icon, CloseIcon, SidebarWrapper, SidebarMenu, SidebarLink} from './sidebar'
 
 interface SidebarProps {
     isOpen: boolean;
@@ -18,16 +17,16 @@ const Sidebar: React.FC<SidebarProps> = ({
             </Icon>
             <SidebarWrapper>
                 <SidebarMenu>
-                    <SidebarLink to="about">
+                    <SidebarLink to="about" onClick={toggle}>
                         About me
                     </SidebarLink>
-                    <SidebarLink to="projects">
+                    <SidebarLink to="projects" onClick={toggle}>
                         Projects
                     </SidebarLink>
-                    <SidebarLink to="experience">
+                    <SidebarLink to="experience" onClick={toggle}>
                         Experience
                     </SidebarLink>
-                    <SidebarLink to="contact">
+                    <SidebarLink to="contact" onClick={toggle}>
                         Contact
                     </SidebarLink>
                 </SidebarMenu>

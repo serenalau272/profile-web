@@ -11,7 +11,7 @@ const Navbar: React.FC<NavbarProps> = ({ toggle })=> {
         <>
             <Nav>
                 <NavbarContainer>
-                    <NavLogo to="/">serena lau</NavLogo>
+                    <NavLogo to="home">serena lau</NavLogo>
                     <MobileIcon onClick={toggle}>
                         <FaBars />
                     </MobileIcon>

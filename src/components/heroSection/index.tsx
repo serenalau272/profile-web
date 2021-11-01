@@ -1,14 +1,32 @@
-import React from 'react'
-import { HeroContainer, HeroBg } from './heroSection'
+import React, { useState } from "react";
+import {
+  HeroContainer,
+  HeroBg,
+  HeroContent,
+  HeroH1,
+  ArrowBtn,
+  ArrowFilled,
+  ArrowEmpty,
+} from "./heroSection";
 
 const HeroSection = () => {
-    return (
-        <HeroContainer id="home">
-            <HeroBg>
-                
-            </HeroBg>
-        </HeroContainer>
-    )
-}
+  const [hover, setHover] = useState(false);
 
-export default HeroSection
+  const onHover = () => {
+    setHover(!hover);
+  };
+
+  return (
+    <HeroContainer id="home">
+      <HeroBg></HeroBg>
+      <HeroContent>
+        <HeroH1>Hello! I'm a software developer.</HeroH1>
+        <ArrowBtn to="about" onMouseEnter={onHover} onMouseLeave={onHover}>
+          Learn more {hover ? <ArrowFilled /> : <ArrowEmpty />}
+        </ArrowBtn>
+      </HeroContent>
+    </HeroContainer>
+  );
+};
+
+export default HeroSection;

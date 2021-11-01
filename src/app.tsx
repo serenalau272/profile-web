@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import GlobalStyle from './styling/global'
 import Home from './pages';
 
@@ -8,7 +8,9 @@ const App: React.FC = ()=> {
     <>
       <GlobalStyle />
           <Router>
-            <Home />
+            <Switch>
+              <Route path="/" component={Home} exact />
+            </Switch>
           </Router>
     </>
   );

@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import {FaTimes} from 'react-icons/fa'
 import {Link as LinkS} from 'react-router-dom'
 
-export interface SidebarContainerProps {
+interface SidebarContainerProps {
     isOpen: boolean;
     onClick: () => void;
 }

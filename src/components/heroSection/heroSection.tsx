@@ -14,25 +14,11 @@ export const HeroContainer = styled.div`
     z-index: 1;
 `
 
-export const HeroBg = styled.div`
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-`
-
-export const HeroWaveWrap = styled.div`
-    max-width: 555px;
-    height: 100%;
-`
-
 export const HeroWaveImg = styled.img`
-    width: 100%auto;
-    margin: 0 0 0 10px;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 80%;
     padding: 0;
 `
 
@@ -47,9 +33,12 @@ export const HeroContent = styled.div`
 `
 
 export const HeroH1 = styled.h1`
-    color: #FFFFFF;
-    font-size: 48px;
+    color: #553B15;
+    text-shadow: 0px 4px 2px #FFE8C5;
+    font-size: 55px;
+    font-weight: lighter;
     text-align: center;
+    position: absolute;
 
     @media screen and (max-width: 768px) {
         font-size: 40px;
@@ -61,7 +50,8 @@ export const HeroH1 = styled.h1`
 `
 
 export const ArrowBtn = styled(Link)`
-    margin-top: 200px;
+    bottom: 40px;
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -69,13 +59,11 @@ export const ArrowBtn = styled(Link)`
     white-space: nowrap;
     padding: 12px 30px;
     color: #FFFFFF;
-    font-size: 25px;
+    font-size: 27px;
     outline: none;
     border: none;
     cursor: pointer;
-    display: flex;
     justify-content: center;
-    align-items: center;
     transition: all 0.2s ease-in-out;
 
     &:hover {
@@ -86,13 +74,13 @@ export const ArrowBtn = styled(Link)`
 `
 
 export const ArrowFilled = styled(IoIosArrowDropdownCircle)`
-    margin-top: 10px;
+    margin-top: 5px;
     font-size: 45px;
     color: #FFD28E;
 `
 
 export const ArrowEmpty = styled(IoIosArrowDown)`
-    margin-top: 10px;
+    margin-top: 5px;
     font-size: 45px;
     color: #FFFFFF;
 `

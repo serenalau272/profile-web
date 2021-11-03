@@ -1,7 +1,11 @@
 import styled from 'styled-components'
 import {Link as LinkS} from 'react-scroll'
 
-export const Nav = styled.nav`
+interface NavProps {
+    scrollNav: boolean;
+}
+
+export const Nav = styled.nav<NavProps>`
     background: #FFD28E;
     height: 80px;
     margin-top: -80px;
@@ -24,16 +28,16 @@ export const NavbarContainer = styled.div`
     height: 80px;
     z-index: 1;
     width: 100%;
-    padding: 0 24px;
-    max-width: 1100px;
+    padding: 40px 90px;
+    box-sizing: border-box;
 `
 
-export const NavLogo = styled(LinkS)`
+export const NavLogo = styled.div`
     color: #000000;
     justify-self: flex-start;
     cursor: pointer;
     font-family: 'Quantico-Regular';
-    font-size: 2.5rem;
+    font-size: 3rem;
     text-shadow: 2px 3px 1px #F49A11;
     display: flex;
     align-items: center;
@@ -60,7 +64,7 @@ export const NavMenu = styled.ul`
     align-items: center;
     list-style: none;
     text-align: center;
-    margin-right: -22px;
+    box-sizing: border-box;
 
     @media screen and (max-width: 768px) {
         display: none;
@@ -71,22 +75,39 @@ export const NavItem = styled.li`
     height: 80px;
 `
 
-export const NavLinks = styled(LinkS)`
+interface NavLinksProps {
+    onSetActive?: () => void;
+    border?: boolean;
+}
+
+export const NavLinks = styled(LinkS)<NavLinksProps>`
     color: #000000;
+    font-size: 20px;
     display: flex;
     align-items: center;
     text-decoration: none;
     padding: 0 1rem;
     height: 100%;
     cursor: pointer;
-
-    &.active {
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10px;
+   
+    /* &.active {
         border-bottom: 10px solid #F49A11;
     }
 
     &:hover {
         border-bottom: 10px solid #F49A11;
-    }
+    }   */
+`
 
-    
+export const NavBorder = styled.div`
+    background: #F49A11;
+    height: 12px;
+    width: 70px;
+    cursor: pointer;
+    margin-left: 11px;
+    margin-bottom: -25px;
+ 
 `

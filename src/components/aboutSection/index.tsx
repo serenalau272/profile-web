@@ -6,10 +6,9 @@ const AboutSection = () => {
     <>
       <AboutContainer id='about'>
         <WindowContainer>
-          <AboutH1>Serena Lau</AboutH1>
+          <AboutH1>About Section</AboutH1>
           <AboutP>
-            I'm a curious and enthusiastic software engineering undergraduate
-            student from The University of Auckland
+           
           </AboutP>
         </WindowContainer>
       </AboutContainer>

@@ -20,6 +20,14 @@ export const HeroWaveImg = styled.img`
     width: 100%;
     height: 80%;
     padding: 0;
+
+    @media screen and (max-width: 768px) {
+        height: 80%;
+    }
+
+    @media screen and (max-width: 480px) {
+        height: 40%;
+    }
 `
 
 export const HeroContent = styled.div`
@@ -46,6 +54,8 @@ export const HeroH1 = styled.h1`
 
     @media screen and (max-width: 480px) {
         font-size: 32px;
+        color: #FFFFFF;
+        text-shadow: 0px 4px 2px #553B15;
     }
 `
 

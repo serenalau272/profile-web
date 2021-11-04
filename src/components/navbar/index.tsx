@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { FaBars } from "react-icons/fa";
 import { animateScroll as scroll } from "react-scroll";
+import pageWave from "../../resources/pageWave.png";
 import {
   Nav,
   NavbarContainer,
+  NavWave,
   NavLogo,
   MobileIcon,
   NavMenu,
@@ -20,7 +22,7 @@ const Navbar: React.FC<NavbarProps> = ({ toggle }) => {
   const [scrollNav, setScrollNav] = useState(false);
 
   const changeNav = () => {
-    if (window.scrollY >= 80) {
+    if (window.scrollY >= 200) {
       setScrollNav(true);
     } else {
       setScrollNav(false);
@@ -28,16 +30,16 @@ const Navbar: React.FC<NavbarProps> = ({ toggle }) => {
   };
 
   enum Section {
-    Home = "home",
     About = "about",
     Projects = "projects",
     Experience = "experience",
     Contact = "contact",
+    Default = "",
   }
 
   const [border, setBorder] = useState(false);
   const [active, setActive] = useState(false);
-  const [section, setSection] = useState(Section.Home);
+  const [section, setSection] = useState(Section.Default);
 
   const onActive = (isEnable: boolean, section: Section) => {
     setSection(section);
@@ -78,13 +80,17 @@ const Navbar: React.FC<NavbarProps> = ({ toggle }) => {
                 duration={500}
                 spy={true}
                 offset={-80}
+                onClick={() => onActive(true, Section.About)}
                 onSetActive={() => onActive(true, Section.About)}
                 onSetInactive={() => onActive(false, Section.About)}
                 onMouseEnter={() => onHover(true, Section.About)}
                 onMouseLeave={() => onHover(false, Section.About)}
               >
-                {border && section == Section.About ? <NavBorder /> : null}About me
+                About me
               </NavLinks>
+              {border && section === Section.About ? (
+                <NavBorder section={Section.About} />
+              ) : null}
             </NavItem>
             <NavItem>
               <NavLinks
@@ -93,13 +99,17 @@ const Navbar: React.FC<NavbarProps> = ({ toggle }) => {
                 duration={500}
                 spy={true}
                 offset={-80}
+                onClick={() => onActive(true, Section.Projects)}
                 onSetActive={() => onActive(true, Section.Projects)}
                 onSetInactive={() => onActive(false, Section.Projects)}
                 onMouseEnter={() => onHover(true, Section.Projects)}
                 onMouseLeave={() => onHover(false, Section.Projects)}
               >
-                {border && section == Section.Projects ? <NavBorder /> : null}Projects
+                Projects
               </NavLinks>
+              {border && section === Section.Projects ? (
+                <NavBorder section={Section.Projects} />
+              ) : null}
             </NavItem>
             <NavItem>
               <NavLinks
@@ -108,14 +118,17 @@ const Navbar: React.FC<NavbarProps> = ({ toggle }) => {
                 duration={500}
                 spy={true}
                 offset={-80}
+                onClick={() => onActive(true, Section.Experience)}
                 onSetActive={() => onActive(true, Section.Experience)}
                 onSetInactive={() => onActive(false, Section.Experience)}
                 onMouseEnter={() => onHover(true, Section.Experience)}
                 onMouseLeave={() => onHover(false, Section.Experience)}
               >
-                {border && section == Section.Experience ? <NavBorder /> : null}
                 Experience
               </NavLinks>
+              {border && section === Section.Experience ? (
+                <NavBorder section={Section.Experience} />
+              ) : null}
             </NavItem>
             <NavItem>
               <NavLinks
@@ -124,16 +137,21 @@ const Navbar: React.FC<NavbarProps> = ({ toggle }) => {
                 duration={500}
                 spy={true}
                 offset={-80}
+                onClick={() => onActive(true, Section.Contact)}
                 onSetActive={() => onActive(true, Section.Contact)}
                 onSetInactive={() => onActive(false, Section.Contact)}
                 onMouseEnter={() => onHover(true, Section.Contact)}
                 onMouseLeave={() => onHover(false, Section.Contact)}
               >
-                {border && section == Section.Contact ? <NavBorder /> : null}Contact
+                Contact
               </NavLinks>
+              {border && section === Section.Contact ? (
+                <NavBorder section={Section.Contact} />
+              ) : null}
             </NavItem>
           </NavMenu>
         </NavbarContainer>
+        <NavWave src={pageWave} />
       </Nav>
     </>
   );

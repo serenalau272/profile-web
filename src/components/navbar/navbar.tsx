@@ -160,7 +160,7 @@ export const NavBorder = styled.div<NavBorderProps>`
     width: ${props => handleSectionType(props.section)};
     cursor: pointer;
     margin-left: 6px;
-    margin-bottom: -35px;
+    margin-bottom: -37px;
     position: absolute;
     z-index: 0;
  

@@ -76,23 +76,31 @@ export const SearchBar = styled.div`
   margin: 0px 40px;
 `;
 
-export const Column1 = styled.div`
+interface OpacityProps {
+    isVisible: boolean;
+}
+
+export const Column1 = styled.div<OpacityProps>`
   grid-area: col1;
   width: 22vw;
   height: 100%;
   justify-self: start;
   align-self: center;
   margin: 0px 40px;
+  opacity: ${props =>  props.isVisible ? '100%' : '0'};;
+  transition: 0.3s ease-in-out;
   
 `;
 
-export const Column2 = styled.div`
+export const Column2 = styled.div<OpacityProps>`
   grid-area: col2;
   justify-self: stretch;
   align-self: stretch;
   display: flex;
   flex-direction: column;
   padding-right: 40px;
+  opacity: ${props =>  props.isVisible ? '100%' : '0'};;
+  transition: 0.3s ease-in-out;
 `;
 
 export const ProfileImg = styled.img`
@@ -159,3 +167,23 @@ export const LinkIcon = styled.div`
   font-size: 55px;
   cursor: pointer;
 `;
+
+export const SearchButton = styled.div<OpacityProps>`
+    background: #FFD28E;
+    color: #000000;
+    grid-area: col2;
+    width: 15vw;
+    height: 10vh;
+    font-size: 50px;
+    border-radius: 10px;
+    margin-top: 12%;
+    margin-left: 10%;
+    z-index: 10;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 10vh;
+    opacity: ${props =>  props.isVisible ? '100%' : '0'};;
+    animation: fadeIn 3s;
+    transition: 0.3s ease-in-out;
+
+`

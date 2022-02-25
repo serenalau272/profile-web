@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const AboutContainer = styled.div`
-  background: #313131;
+  background: #857763;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -77,7 +77,7 @@ export const SearchBar = styled.div`
 `;
 
 interface OpacityProps {
-    isVisible: boolean;
+  isVisible: boolean;
 }
 
 export const Column1 = styled.div<OpacityProps>`
@@ -87,9 +87,8 @@ export const Column1 = styled.div<OpacityProps>`
   justify-self: start;
   align-self: center;
   margin: 0px 40px;
-  opacity: ${props =>  props.isVisible ? '100%' : '0'};;
+  opacity: ${(props) => (props.isVisible ? "100%" : "0")};
   transition: 0.3s ease-in-out;
-  
 `;
 
 export const Column2 = styled.div<OpacityProps>`
@@ -99,7 +98,7 @@ export const Column2 = styled.div<OpacityProps>`
   display: flex;
   flex-direction: column;
   padding-right: 40px;
-  opacity: ${props =>  props.isVisible ? '100%' : '0'};;
+  opacity: ${(props) => (props.isVisible ? "100%" : "0")};
   transition: 0.3s ease-in-out;
 `;
 
@@ -169,21 +168,20 @@ export const LinkIcon = styled.div`
 `;
 
 export const SearchButton = styled.div<OpacityProps>`
-    background: #FFD28E;
-    color: #000000;
-    grid-area: col2;
-    width: 15vw;
-    height: 10vh;
-    font-size: 50px;
-    border-radius: 10px;
-    margin-top: 12%;
-    margin-left: 10%;
-    z-index: 10;
-    text-align: center;
-    vertical-align: middle;
-    line-height: 10vh;
-    opacity: ${props =>  props.isVisible ? '100%' : '0'};;
-    animation: fadeIn 3s;
-    transition: 0.3s ease-in-out;
-
-`
+  background: #ffd28e;
+  color: #000000;
+  grid-area: col2;
+  width: 15vw;
+  height: 10vh;
+  font-size: 50px;
+  border-radius: 10px;
+  margin-top: 12%;
+  margin-left: 10%;
+  z-index: 10;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 10vh;
+  opacity: ${(props) => (props.isVisible ? "100%" : "0")};
+  animation: fadeIn 3s;
+  transition: 0.3s ease-in-out;
+`;

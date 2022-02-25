@@ -45,18 +45,7 @@ const AboutSection = () => {
       <AboutContainer id="about">
         <WindowContainer>
           <WindowScreen>
-            <WindowBar>
-              <WindowBarCircle colour="#FF6D6D" />
-              <WindowBarCircle colour="#FFD28E" />
-              <WindowBarCircle colour="#4EDE5C" />
-            </WindowBar>
             <SearchBar>Serena Lau</SearchBar>
-            {/* <SearchButton
-              onClick={onButtonClick}
-              isVisible={isButtonVisible}
-            >
-              SEARCH
-            </SearchButton> */}
             <Column1 data-aos="fade-zoom-in" isVisible={isContentVisible}>
               <ProfileImg src={profile} />
               <ProfileBg />

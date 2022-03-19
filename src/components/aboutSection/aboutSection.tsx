@@ -1,142 +1,68 @@
 import styled from "styled-components";
 
 export const AboutContainer = styled.div`
-  background: #857763;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 30px;
-  height: 100vh;
-  position: relative;
-  z-index: 1;
   @media screen and (max-width: 768px) {
     padding: 100px 0;
   }
 `;
 
+export const AboutScreen = styled.img`
+  width: 100%;
+  z-index: -1;
+`;
+
 export const WindowContainer = styled.div`
-  color: #ffffff;
-  background: #6f6f6f;
-  height: 73vh;
-  width: 80vw;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
-export const WindowScreen = styled.div`
-  background: #ffffff;
-  height: 92%;
-  width: 96%;
-  border-radius: 8px;
-  display: grid;
-  grid-template-columns: 32% 68%;
-  grid-template-rows: 10% 23% 65%;
-  grid-template-areas:
-    "bar bar"
-    "search search"
-    "col1 col2";
-`;
-
-export const WindowBar = styled.div`
-  background: #4a4a4a;
-  height: 45px;
-  grid-area: bar;
+  position: absolute;
+  height: 78.5%;
+  width: 100%;
+  margin-top: -23.8vw;
   display: flex;
   flex-direction: row;
-  justify-content: stretch;
+  justify-content: center;
   align-items: center;
-  padding-left: 12px;
+  z-index: 10;
 `;
 
-interface WindowBarCircleProps {
-  colour: string;
-}
-
-export const WindowBarCircle = styled.div<WindowBarCircleProps>`
-  background: ${(props) => props.colour};
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  margin-right: 5px;
-`;
-
-export const SearchBar = styled.div`
-  background: #6f6f6f;
-  width: auto;
-  height: 10vh;
-  border-radius: 15px;
-  font-size: 40px;
-  padding: 2vh 35px;
-  grid-area: search;
-  justify-self: stretch;
-  align-self: center;
-  margin: 0px 40px;
-`;
-
-interface OpacityProps {
-  isVisible: boolean;
-}
-
-export const Column1 = styled.div<OpacityProps>`
-  grid-area: col1;
-  width: 22vw;
+export const Column1 = styled.div`
+  order: 1;
+  width: 38%;
   height: 100%;
-  justify-self: start;
-  align-self: center;
-  margin: 0px 40px;
-  opacity: ${(props) => (props.isVisible ? "100%" : "0")};
-  transition: 0.3s ease-in-out;
 `;
 
-export const Column2 = styled.div<OpacityProps>`
-  grid-area: col2;
-  justify-self: stretch;
-  align-self: stretch;
+export const Column2 = styled.div`
+  order 2;
+  width: 70%;
+  height: 100%;
+  padding: 2.5vw 1vw 0vw;
   display: flex;
   flex-direction: column;
-  padding-right: 40px;
-  opacity: ${(props) => (props.isVisible ? "100%" : "0")};
-  transition: 0.3s ease-in-out;
 `;
 
 export const ProfileImg = styled.img`
-  width: 20vw;
+  width: 30%;
+  top: 8%;
+  left: 3.5%;
   z-index: 1;
   position: absolute;
 `;
 
 export const ProfileBg = styled.div`
-  background: #ffd28e;
-  width: 20.5vw;
-  height: 20.5vw;
-  margin-top: 1vh;
-  margin-left: 1vh;
+  background: #f4ddb3;
+  width: 29.8%;
+  height: 83%;
+  left: 5%;
+  top: 10.5%;
   z-index: 0;
-  border-radius: 10px;
+  border-radius: 3%;
   align-self: center;
   position: absolute;
 `;
 
-export const AboutH1 = styled.h1`
-  color: #ffffff;
-  font-size: 30px;
-  text-align: center;
-
-  @media screen and (max-width: 768px) {
-    font-size: 22px;
-  }
-
-  @media screen and (max-width: 480px) {
-    font-size: 15px;
-  }
-`;
-
 export const AboutP = styled.p`
   color: #585858;
-  font-size: 27px;
+  font-size: 1.4vw;
+  font-family: "KumbhSans-Light";
+  line-height: 2.3vw;
   text-align: left;
   justify-self: stretch;
   align-self: start;
@@ -152,7 +78,7 @@ export const AboutP = styled.p`
 `;
 
 export const IconsWrapper = styled.div`
-  height: 50px;
+  height: 20%;
   justify-self: stretch;
   align-self: start;
   margin-top: 1.8vh;
@@ -163,25 +89,6 @@ export const IconsWrapper = styled.div`
 `;
 
 export const LinkIcon = styled.div`
-  font-size: 55px;
+  font-size: 3vw;
   cursor: pointer;
-`;
-
-export const SearchButton = styled.div<OpacityProps>`
-  background: #ffd28e;
-  color: #000000;
-  grid-area: col2;
-  width: 15vw;
-  height: 10vh;
-  font-size: 50px;
-  border-radius: 10px;
-  margin-top: 12%;
-  margin-left: 10%;
-  z-index: 10;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 10vh;
-  opacity: ${(props) => (props.isVisible ? "100%" : "0")};
-  animation: fadeIn 3s;
-  transition: 0.3s ease-in-out;
 `;

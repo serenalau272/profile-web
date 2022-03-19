@@ -1,11 +1,13 @@
 import React from "react";
-import { ContactContainer } from "./contactSection";
+import { ContactContainer, ContactScreen } from "./contactSection";
+
+import contactTab from "../../resources/contactTab.png";
 
 const ContactSection = () => {
   return (
     <>
-      <ContactContainer id='contact'>
-        Contact Section
+      <ContactContainer>
+        <ContactScreen src={contactTab} />
       </ContactContainer>
     </>
   );

@@ -1,15 +1,16 @@
-import React from 'react'
-import { ExperienceContainer } from './experienceSection'
+import React from "react";
+import { ExperienceContainer, ExperienceScreen } from "./experienceSection";
+
+import experienceTab from "../../resources/experienceTab.png";
 
 const ExperienceSection = () => {
-    return (
-        <>
-            <ExperienceContainer id='experience'>
-                Experience Section
-            </ExperienceContainer>
-            
-        </>
-    )
-}
+  return (
+    <>
+      <ExperienceContainer>
+        <ExperienceScreen src={experienceTab} />
+      </ExperienceContainer>
+    </>
+  );
+};
 
-export default ExperienceSection
+export default ExperienceSection;

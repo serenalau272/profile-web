@@ -1,15 +1,11 @@
 import styled from "styled-components";
-import { Link } from "react-scroll";
-
-interface VisibilityProps {
-  isVisible: boolean;
-}
 
 export const HeroH1 = styled.h1`
   color: #ffffff;
   text-shadow: 0px 4px 2px rgba(220, 144, 76, 0.43);
   font-size: 2.2vw;
   font-weight: lighter;
+  line-height: 3.5vw;
   text-align: center;
   position: relative;
   margin: auto;
@@ -41,14 +37,14 @@ export const HeroH2 = styled.h2`
   font-style: italic;
   text-align: center;
   order: 3;
-  align-self: flex-start;
-  margin-left: 22vw;
+  align-self: center;
+  margin-right: 16vw;
   margin-top: -3vw;
   margin-bottom: 0.5vw;
-  width: 40vw;
+  cursor: pointer;
 
   @media screen and (max-width: 1500px) {
-    margin-left: 19.5vw;
+    margin-right: 19vw;
   }
 `;
 

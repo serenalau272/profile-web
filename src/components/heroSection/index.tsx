@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import Clock from "react-clock";
+import "react-clock/dist/Clock.css";
 import Typewriter from "typewriter-effect";
 
 import {
@@ -37,6 +39,16 @@ interface IHeroSectionProps {
 }
 
 const HeroSection: React.FC<IHeroSectionProps> = (props: IHeroSectionProps) => {
+  const [value, setValue] = useState(new Date());
+
+  useEffect(() => {
+    const interval = setInterval(() => setValue(new Date()), 1000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
   return (
     <HeroContainer>
       <HeroDesk src={heroDesk} />
@@ -48,10 +60,12 @@ const HeroSection: React.FC<IHeroSectionProps> = (props: IHeroSectionProps) => {
               onInit={(typewriter) => {
                 typewriter
                   .changeDelay(100)
-                  .pauseFor(1000)
+                  .pauseFor(700)
                   .typeString("Hello!")
                   .pauseFor(700)
-                  .typeString(" I'm a software engineer.")
+                  .typeString(" I'm Serena,")
+                  .pauseFor(200)
+                  .typeString(" a software engineer.")
                   .start();
               }}
             />
@@ -62,12 +76,24 @@ const HeroSection: React.FC<IHeroSectionProps> = (props: IHeroSectionProps) => {
         <HeroNotePad src={heroNotePad} />
         <HeroMouse src={heroMouse} />
       </HeroDeskItemsContainer>
-      <HeroH2>• Click to zoom •</HeroH2>
+      <HeroH2 onClick={props.onClickScreen}>• Click to zoom •</HeroH2>
       <HeroShelf />
       <HeroShelfContainer>
         <HeroBooks src={heroBooks} />
+        {/* <Clock
+          value={value}
+          className="clock-style"
+          hourHandLength={40}
+          hourHandWidth={2}
+          minuteHandLength={50}
+          secondHandLength={60}
+          renderMinuteMarks={false}
+        /> */}
         <HeroClock src={heroClock} />
-        <HeroBibleVerse src={heroBibleVerse} />
+        <HeroBibleVerse
+          src={heroBibleVerse}
+          onClick={() => window.open("https://www.pcbc.nz/", "_blank")}
+        />
         <HeroRubiks src={heroRubiks} />
       </HeroShelfContainer>
     </HeroContainer>

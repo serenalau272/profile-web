@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
-import Clock from "react-clock";
-import "react-clock/dist/Clock.css";
-import Typewriter from "typewriter-effect";
+import React, { useEffect, useState } from 'react'
+import Clock from 'react-clock'
+import 'react-clock/dist/Clock.css'
+import Typewriter from 'typewriter-effect'
 
 import {
   HeroContainer,
@@ -21,33 +21,33 @@ import {
   HeroRubiks,
   HeroShelfContainer,
   HeroClock,
-} from "./heroSection";
+} from './heroSection'
 
-import heroComputer from "../../resources/heroComputer.png";
-import heroDesk from "../../resources/desk.png";
-import heroBibleVerse from "../../resources/bibleVerse.png";
-import heroBooks from "../../resources/books.png";
-import heroLamp from "../../resources/lamp.png";
-import heroNotePad from "../../resources/notePad.png";
-import heroMouse from "../../resources/mouse.png";
-import heroPencils from "../../resources/pencils.png";
-import heroRubiks from "../../resources/rubiks.png";
-import heroClock from "../../resources/clock.png";
+import heroComputer from '../../resources/media/heroComputer.png'
+import heroDesk from '../../resources/media/desk.png'
+import heroBibleVerse from '../../resources/media/bibleVerse.png'
+import heroBooks from '../../resources/media/books.png'
+import heroLamp from '../../resources/media/lamp.png'
+import heroNotePad from '../../resources/media/notePad.png'
+import heroMouse from '../../resources/media/mouse.png'
+import heroPencils from '../../resources/media/pencils.png'
+import heroRubiks from '../../resources/media/rubiks.png'
+import heroClock from '../../resources/media/clock.png'
 
 interface IHeroSectionProps {
-  onClickScreen: () => void;
+  onClickScreen: () => void
 }
 
 const HeroSection: React.FC<IHeroSectionProps> = (props: IHeroSectionProps) => {
-  const [value, setValue] = useState(new Date());
+  const [value, setValue] = useState(new Date())
 
   useEffect(() => {
-    const interval = setInterval(() => setValue(new Date()), 1000);
+    const interval = setInterval(() => setValue(new Date()), 1000)
 
     return () => {
-      clearInterval(interval);
-    };
-  }, []);
+      clearInterval(interval)
+    }
+  }, [])
 
   return (
     <HeroContainer>
@@ -61,12 +61,12 @@ const HeroSection: React.FC<IHeroSectionProps> = (props: IHeroSectionProps) => {
                 typewriter
                   .changeDelay(100)
                   .pauseFor(700)
-                  .typeString("Hello!")
+                  .typeString('Hello!')
                   .pauseFor(700)
                   .typeString(" I'm Serena,")
                   .pauseFor(200)
-                  .typeString(" a software engineer.")
-                  .start();
+                  .typeString(' a software engineer.')
+                  .start()
               }}
             />
           </HeroH1>
@@ -92,12 +92,12 @@ const HeroSection: React.FC<IHeroSectionProps> = (props: IHeroSectionProps) => {
         <HeroClock src={heroClock} />
         <HeroBibleVerse
           src={heroBibleVerse}
-          onClick={() => window.open("https://www.pcbc.nz/", "_blank")}
+          onClick={() => window.open('https://www.pcbc.nz/', '_blank')}
         />
         <HeroRubiks src={heroRubiks} />
       </HeroShelfContainer>
     </HeroContainer>
-  );
-};
+  )
+}
 
-export default HeroSection;
+export default HeroSection

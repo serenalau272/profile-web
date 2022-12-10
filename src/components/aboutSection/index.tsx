@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { FaLinkedin, FaGithubSquare, FaFacebookSquare } from "react-icons/fa";
-import Aos from "aos";
-import "aos/dist/aos.css";
+import React, { useState, useEffect } from 'react'
+import { FaLinkedin, FaGithubSquare, FaFacebookSquare } from 'react-icons/fa'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 import {
   AboutContainer,
@@ -14,23 +14,23 @@ import {
   IconsWrapper,
   LinkIcon,
   AboutScreen,
-} from "./aboutSection";
+} from './aboutSection'
 
-import profile from "../../resources/profile.jpg";
-import aboutTab from "../../resources/aboutTab.png";
-const iconStyle = { color: "#6F6F6F" };
+import profile from '../../resources/images/profile.jpg'
+import BrowserPage from '../browser/browserPage'
+const iconStyle = { color: '#6F6F6F' }
 
 const AboutSection = () => {
   useEffect(() => {
     Aos.init({
       duration: 1000,
       once: false,
-    });
-  }, []); //data-aos="fade-zoom-in"
+    })
+  }, []) //data-aos="fade-zoom-in"
 
   return (
     <>
-      <AboutContainer>
+      {/* <AboutContainer>
         <AboutScreen src={aboutTab} />
         <WindowContainer>
           <Column1>
@@ -50,8 +50,8 @@ const AboutSection = () => {
                 <FaLinkedin
                   onClick={() =>
                     window.open(
-                      "https://www.linkedin.com/in/serena-lau-2166111a0/",
-                      "_blank"
+                      'https://www.linkedin.com/in/serena-lau-2166111a0/',
+                      '_blank',
                     )
                   }
                   style={iconStyle}
@@ -60,7 +60,7 @@ const AboutSection = () => {
               <LinkIcon>
                 <FaGithubSquare
                   onClick={() =>
-                    window.open("https://github.com/serenalau272", "_blank")
+                    window.open('https://github.com/serenalau272', '_blank')
                   }
                   style={iconStyle}
                 />
@@ -69,8 +69,8 @@ const AboutSection = () => {
                 <FaFacebookSquare
                   onClick={() =>
                     window.open(
-                      "https://www.facebook.com/serena.lau.351/",
-                      "_blank"
+                      'https://www.facebook.com/serena.lau.351/',
+                      '_blank',
                     )
                   }
                   style={iconStyle}
@@ -79,9 +79,10 @@ const AboutSection = () => {
             </IconsWrapper>
           </Column2>
         </WindowContainer>
-      </AboutContainer>
+      </AboutContainer> */}
+      <BrowserPage pageName="About" />
     </>
-  );
-};
+  )
+}
 
-export default AboutSection;
+export default AboutSection

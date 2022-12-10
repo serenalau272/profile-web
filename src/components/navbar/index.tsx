@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { FaBars } from "react-icons/fa";
-import { animateScroll as scroll } from "react-scroll";
-import pageWave from "../../resources/pageWave.png";
+import React, { useState, useEffect } from 'react'
+import { FaBars } from 'react-icons/fa'
+import { animateScroll as scroll } from 'react-scroll'
+import pageWave from '../../resources/media/pageWave.png'
 import {
   Nav,
   NavbarContainer,
@@ -12,57 +12,57 @@ import {
   NavItem,
   NavLinks,
   NavBorder,
-} from "./navbar";
+} from './navbar'
 
 interface NavbarProps {
-  toggle: () => void;
+  toggle: () => void
 }
 
 const Navbar: React.FC<NavbarProps> = ({ toggle }) => {
-  const [scrollNav, setScrollNav] = useState(false);
+  const [scrollNav, setScrollNav] = useState(false)
 
   const changeNav = () => {
     if (window.scrollY >= 200) {
-      setScrollNav(true);
+      setScrollNav(true)
     } else {
-      setScrollNav(false);
+      setScrollNav(false)
     }
-  };
-
-  enum Section {
-    About = "about",
-    Projects = "projects",
-    Experience = "experience",
-    Contact = "contact",
-    Default = "",
   }
 
-  const [border, setBorder] = useState(false);
-  const [active, setActive] = useState(false);
-  const [section, setSection] = useState(Section.Default);
+  enum Section {
+    About = 'about',
+    Projects = 'projects',
+    Experience = 'experience',
+    Contact = 'contact',
+    Default = '',
+  }
+
+  const [border, setBorder] = useState(false)
+  const [active, setActive] = useState(false)
+  const [section, setSection] = useState(Section.Default)
 
   const onActive = (isEnable: boolean, section: Section) => {
-    setSection(section);
-    setBorder(isEnable);
-    setActive(isEnable);
-  };
+    setSection(section)
+    setBorder(isEnable)
+    setActive(isEnable)
+  }
 
   const onHover = (isEnable: boolean, section: Section) => {
-    setSection(section);
+    setSection(section)
     if (isEnable) {
-      setBorder(isEnable);
+      setBorder(isEnable)
     } else {
-      active ? setBorder(border) : setBorder(isEnable);
+      active ? setBorder(border) : setBorder(isEnable)
     }
-  };
+  }
 
   useEffect(() => {
-    window.addEventListener("scroll", changeNav);
-  }, []);
+    window.addEventListener('scroll', changeNav)
+  }, [])
 
   const toggleHome = () => {
-    scroll.scrollToTop();
-  };
+    scroll.scrollToTop()
+  }
 
   return (
     <>
@@ -154,7 +154,7 @@ const Navbar: React.FC<NavbarProps> = ({ toggle }) => {
         <NavWave src={pageWave} />
       </Nav>
     </>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

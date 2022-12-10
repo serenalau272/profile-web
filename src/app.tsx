@@ -1,10 +1,28 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import GlobalStyle from "./styling/global";
-import Home from "./pages";
-import AboutSection from "./components/aboutSection";
-import ContactSection from "./components/contactSection";
-import ExperienceSection from "./components/experienceSection";
+import React from 'react'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import {
+  faXmark,
+  faArrowLeft,
+  faArrowRight,
+  faRotateRight,
+  faEllipsisVertical,
+} from '@fortawesome/free-solid-svg-icons'
+import { faStar } from '@fortawesome/free-regular-svg-icons'
+import GlobalStyle from './styling/global'
+import Home from './pages'
+import AboutSection from './components/aboutSection'
+import ContactSection from './components/contactSection'
+import ExperienceSection from './components/experienceSection'
+
+library.add(
+  faXmark,
+  faArrowLeft,
+  faArrowRight,
+  faRotateRight,
+  faStar,
+  faEllipsisVertical,
+)
 
 const App: React.FC = () => {
   return (
@@ -19,7 +37,7 @@ const App: React.FC = () => {
         </Switch>
       </Router>
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App

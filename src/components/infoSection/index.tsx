@@ -1,56 +1,56 @@
-import React, { useState } from "react";
-import AboutSection from "../aboutSection";
-import ContactSection from "../contactSection";
-import ExperienceSection from "../experienceSection";
-import ProjectsSection from "../projectsSection";
+import React, { useState } from 'react'
+import AboutSection from '../aboutSection'
+import ContactSection from '../contactSection'
+import ExperienceSection from '../experienceSection'
+import ProjectsSection from '../projectsSection'
 import {
   HomeLogo,
   InfoComputer,
   InfoContainer,
   NavBar,
   SectionContainer,
-} from "./infoSection";
+} from './infoSection'
 
-import infoComputer from "../../resources/infoComputer.png";
-import NavBarItem from "../navBarItem";
+import infoComputer from '../../resources/media/infoComputer.png'
+import NavBarItem from '../navBarItem'
 
 interface IInfoSectionProps {
-  onClickHome: () => void;
+  onClickHome: () => void
 }
 
 const InfoSection: React.FC<IInfoSectionProps> = (props: IInfoSectionProps) => {
   enum Section {
-    About = "About me",
-    Projects = "Projects",
-    Experience = "Experience",
-    Contact = "Contact",
+    About = 'About me',
+    Projects = 'Projects',
+    Experience = 'Experience',
+    Contact = 'Contact',
   }
 
-  const [currentSection, setCurrentSection] = useState(Section.About);
+  const [currentSection, setCurrentSection] = useState(Section.About)
 
   const isSection = (section: Section) => {
-    return section === currentSection;
-  };
+    return section === currentSection
+  }
 
   const getNavBarItemSection = (section: Section) => {
-    let width: string;
+    let width: string
 
     switch (section) {
       case Section.About:
-        width = "8.2vw";
-        break;
+        width = '8.2vw'
+        break
       case Section.Projects:
-        width = "6.7vw";
-        break;
+        width = '6.7vw'
+        break
       case Section.Experience:
-        width = "9.3vw";
-        break;
+        width = '9.3vw'
+        break
       case Section.Contact:
-        width = "6.7vw";
-        break;
+        width = '6.7vw'
+        break
       default:
-        width = "8.2vw";
-        break;
+        width = '8.2vw'
+        break
     }
 
     return (
@@ -60,8 +60,8 @@ const InfoSection: React.FC<IInfoSectionProps> = (props: IInfoSectionProps) => {
         isSelected={isSection(section)}
         handleOnClick={() => setCurrentSection(section)}
       />
-    );
-  };
+    )
+  }
 
   return (
     <InfoContainer>
@@ -80,7 +80,7 @@ const InfoSection: React.FC<IInfoSectionProps> = (props: IInfoSectionProps) => {
         {getNavBarItemSection(Section.Contact)}
       </NavBar>
     </InfoContainer>
-  );
-};
+  )
+}
 
-export default InfoSection;
+export default InfoSection

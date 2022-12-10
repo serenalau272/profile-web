@@ -1,16 +1,18 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components'
 
-import KumbhSansRegular from './KumbhSans-Regular.ttf';
+import KumbhSansRegular from './KumbhSans-Regular.ttf'
 
-import KumbhSansLight from './KumbhSans-Light.ttf';
+import KumbhSansLight from './KumbhSans-Light.ttf'
 
-import KumbhSansSemiBold from './KumbhSans-SemiBold.ttf';
+import KumbhSansSemiBold from './KumbhSans-SemiBold.ttf'
 
-import KumbhSansMedium from './KumbhSans-Medium.ttf';
+import KumbhSansMedium from './KumbhSans-Medium.ttf'
 
-import PoppinsRegular from './Poppins-Regular.ttf';
+import PoppinsRegular from './Poppins-Regular.ttf'
 
-import PoppinsLight from './Poppins-Light.ttf';
+import PoppinsLight from './Poppins-Light.ttf'
+
+import PoppinsExtraLight from './Poppins-ExtraLight.ttf'
 
 const GlobalFonts = createGlobalStyle`
     @font-face {
@@ -54,6 +56,13 @@ const GlobalFonts = createGlobalStyle`
         font-weight: 200;
         font-style: normal;
     }
+
+    @font-face {
+        font-family: 'Poppins-ExtraLight';
+        src: url(${PoppinsExtraLight}) format('truetype');
+        font-weight: 200;
+        font-style: normal;
+    }
 `
 
-export default GlobalFonts;
+export default GlobalFonts

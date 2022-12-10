@@ -1,16 +1,18 @@
-import React from "react";
-import { ExperienceContainer, ExperienceScreen } from "./experienceSection";
+import React from 'react'
+import { ExperienceContainer, ExperienceScreen } from './experienceSection'
 
-import experienceTab from "../../resources/experienceTab.png";
+import experienceTab from '../../resources/media/experienceTab.png'
+import BrowserPage from '../browser/browserPage'
 
 const ExperienceSection = () => {
   return (
     <>
-      <ExperienceContainer>
+      {/* <ExperienceContainer>
         <ExperienceScreen src={experienceTab} />
-      </ExperienceContainer>
+      </ExperienceContainer> */}
+      <BrowserPage pageName="Experience" />
     </>
-  );
-};
+  )
+}
 
-export default ExperienceSection;
+export default ExperienceSection

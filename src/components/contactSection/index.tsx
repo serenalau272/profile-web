@@ -1,7 +1,7 @@
-import React from "react";
-import { ContactContainer, ContactScreen } from "./contactSection";
+import React from 'react'
+import { ContactContainer, ContactScreen } from './contactSection'
 
-import contactTab from "../../resources/contactTab.png";
+import contactTab from '../../resources/media/contactTab.png'
 
 const ContactSection = () => {
   return (
@@ -10,7 +10,7 @@ const ContactSection = () => {
         <ContactScreen src={contactTab} />
       </ContactContainer>
     </>
-  );
-};
+  )
+}
 
-export default ContactSection;
+export default ContactSection

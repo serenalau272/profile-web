@@ -6,6 +6,7 @@ export const BrowserContainer = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
+  flex: 0 1 auto;
 `
 export const TabBar = styled.div`
   background-color: #eeeeee;
@@ -18,9 +19,11 @@ export const TabBar = styled.div`
 
 export const TabsContainer = styled.div`
   position: relative;
+  display: flex;
+  flex-direction: row;
   height: 100%;
   width: 80%;
-  margin-left: -1.7%;
+  margin-left: -0.1%;
 `
 
 interface ControlBtnProps {
@@ -63,4 +66,9 @@ export const Divider = styled.div`
   width: 100%;
   height: 0.07vw;
   margin-top: 1.4vw;
+`
+
+export const ContentContainer = styled.div`
+  widht: 100%;
+  flex: 1 1 auto;
 `

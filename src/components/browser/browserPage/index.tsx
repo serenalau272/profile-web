@@ -4,6 +4,7 @@ import Tab from '../Tab'
 import {
   BrowserContainer,
   CircleBtn,
+  ContentContainer,
   ControlsBar,
   Divider,
   SearchBar,
@@ -12,6 +13,7 @@ import {
 } from './browserPage'
 
 import { ReactComponent as Star } from '../../../resources/icons/star-regular.svg'
+import { Section } from '../../../util/enums/Section'
 
 const ArrowIconStyle = {
   color: '#A9A9A9',
@@ -43,7 +45,8 @@ const EllipsisIconStyle = {
 }
 
 interface BrowserPageProps {
-  pageName: string
+  section: Section
+  children?: React.ReactNode
 }
 
 const BrowserPage = (props: BrowserPageProps) => {
@@ -56,21 +59,36 @@ const BrowserPage = (props: BrowserPageProps) => {
           <CircleBtn backgroundColor="#4EDE5C" borderColor="#45C752" />
           <TabsContainer>
             <Tab
-              tabTitle={
-                props.pageName === 'About' ? 'Serena Lau' : props.pageName
-              }
+              tabTitle="Serena Lau"
+              isSpotlight={props.section === Section.About}
             />
+            {(props.section === Section.Projects ||
+              props.section === Section.Experience ||
+              props.section === Section.Contact) && (
+              <Tab
+                tabTitle={Section.Projects}
+                isSpotlight={props.section === Section.Projects}
+              />
+            )}
+            {(props.section === Section.Experience ||
+              props.section === Section.Contact) && (
+              <Tab
+                tabTitle={Section.Experience}
+                isSpotlight={props.section === Section.Experience}
+              />
+            )}
           </TabsContainer>
         </TabBar>
         <ControlsBar>
           <FontAwesomeIcon icon="arrow-left" style={ArrowIconStyle} />
           <FontAwesomeIcon icon="arrow-right" style={ArrowIconStyle} />
           <FontAwesomeIcon icon="rotate-right" style={RefreshIconStyle} />
-          <SearchBar>{`serenalau.me/${props.pageName.toLowerCase()}`}</SearchBar>
+          <SearchBar>{`serenalau.me/${props.section.toLowerCase()}`}</SearchBar>
           {/* <Star style={StarIconStyle} /> */}
           <FontAwesomeIcon icon="ellipsis-vertical" style={EllipsisIconStyle} />
         </ControlsBar>
         <Divider />
+        <ContentContainer>{props.children}</ContentContainer>
       </BrowserContainer>
     </>
   )

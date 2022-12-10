@@ -13,19 +13,13 @@ import {
 
 import infoComputer from '../../resources/media/infoComputer.png'
 import NavBarItem from '../navBarItem'
+import { Section } from '../../util/enums/Section'
 
 interface IInfoSectionProps {
   onClickHome: () => void
 }
 
 const InfoSection: React.FC<IInfoSectionProps> = (props: IInfoSectionProps) => {
-  enum Section {
-    About = 'About me',
-    Projects = 'Projects',
-    Experience = 'Experience',
-    Contact = 'Contact',
-  }
-
   const [currentSection, setCurrentSection] = useState(Section.About)
 
   const isSection = (section: Section) => {
@@ -55,7 +49,7 @@ const InfoSection: React.FC<IInfoSectionProps> = (props: IInfoSectionProps) => {
 
     return (
       <NavBarItem
-        sectionTitle={section}
+        sectionTitle={section === Section.About ? 'About me' : section}
         width={width}
         isSelected={isSection(section)}
         handleOnClick={() => setCurrentSection(section)}

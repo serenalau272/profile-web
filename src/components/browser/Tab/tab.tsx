@@ -1,31 +1,38 @@
 import styled from 'styled-components'
 
-export const TabContainer = styled.div`
+interface TabProps {
+  isSpotlight: boolean
+}
+
+export const TabContainer = styled.div<TabProps>`
+  position: relative;
   display: flex;
   flex-direction: row;
-  width: 30%;
   height: 100%;
+  margin-right: -0.8vw;
 `
 
 export const TabEdge = styled.div`
   background-color: #eeeeee;
   border-radius: 0.5vw;
-  width: 2vw;
+  width: 1vw;
   height: 100%;
   z-index: 1;
 `
 
-export const TabEdgeBackground = styled.div`
-  background-color: white;
+export const TabEdgeBackground = styled.div<TabProps>`
+  background-color: ${(props) =>
+    props.isSpotlight ? '#ffffff' : 'transparent'};
   width: 10.5vw;
   height: 50%;
   position: absolute;
-  left: 1.5vw;
+  left: 0.5vw;
   top: 50%;
 `
 
-export const TabBackground = styled.div`
-  background-color: white;
+export const TabBackground = styled.div<TabProps>`
+  background-color: ${(props) =>
+    props.isSpotlight ? '#ffffff' : 'transparent'};
   border-radius: 0.5vw;
   width: 9.5vw;
   height: 81%;

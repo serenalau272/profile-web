@@ -3,6 +3,7 @@ import { ExperienceContainer, ExperienceScreen } from './experienceSection'
 
 import experienceTab from '../../resources/media/experienceTab.png'
 import BrowserPage from '../browser/browserPage'
+import { Section } from '../../util/enums/Section'
 
 const ExperienceSection = () => {
   return (
@@ -10,7 +11,7 @@ const ExperienceSection = () => {
       {/* <ExperienceContainer>
         <ExperienceScreen src={experienceTab} />
       </ExperienceContainer> */}
-      <BrowserPage pageName="Experience" />
+      <BrowserPage section={Section.Experience} />
     </>
   )
 }

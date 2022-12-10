@@ -22,20 +22,23 @@ const xIconStyle = {
 
 interface TabProps {
   tabTitle: string
+  isSpotlight: boolean
 }
 
 const Tab = (props: TabProps) => {
   return (
     <>
-      <TabContainer>
+      <TabContainer isSpotlight={props.isSpotlight}>
         <TabEdge />
-        <TabEdgeBackground />
-        <TabBackground>
+        <TabEdgeBackground isSpotlight={props.isSpotlight} />
+        <TabBackground isSpotlight={props.isSpotlight}>
           <TabLogo>sl</TabLogo>
           <TabTitle>{props.tabTitle}</TabTitle>
-          <FontAwesomeIcon icon="xmark" style={xIconStyle} />
+          {props.isSpotlight && (
+            <FontAwesomeIcon icon="xmark" style={xIconStyle} />
+          )}
         </TabBackground>
-        <TabEdge />
+        {props.isSpotlight && <TabEdge />}
       </TabContainer>
     </>
   )

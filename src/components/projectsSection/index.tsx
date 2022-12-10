@@ -4,14 +4,15 @@ import { ProjectsContainer, ProjectsScreen } from './projectsSection'
 import projectsTab from '../../resources/media/projectsTab.png'
 import aboutTab from '../../resources/media/aboutTab.png'
 import BrowserPage from '../browser/browserPage'
+import { Section } from '../../util/enums/Section'
 
 const ProjectsSection = () => {
   return (
     <>
       {/* <ProjectsContainer>
-        <ProjectsScreen src={aboutTab} />
+        <ProjectsScreen src={projectsTab} />
       </ProjectsContainer> */}
-      <BrowserPage pageName="Projects" />
+      <BrowserPage section={Section.Projects} />
     </>
   )
 }

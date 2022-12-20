@@ -1,0 +1,46 @@
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.scroll-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5vw;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-x: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  margin-bottom: 1vw;
+  // border: 1px solid red;
+}
+
+.spotlight-item {
+  // border: 3px solid grey;
+}
+
+.dots-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.7vw;
+}
+
+.dot-body {
+  height: 0.6vw;
+  width: 0.6vw;
+  border-radius: 2vw;
+  border: 0.15vw solid #494949;
+
+  &.filled {
+    background-color: #494949;
+  }
+
+  &:hover {
+    background-color: #494949;
+    @extend .cursor-pointer;
+  }
+}

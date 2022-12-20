@@ -5,6 +5,7 @@ import {
   TabContainer,
   TabEdge,
   TabEdgeBackground,
+  TabLine,
   TabLogo,
   TabTitle,
 } from './tab'
@@ -15,9 +16,20 @@ const xIconStyle = {
   height: '0.8vw',
   alignSelf: 'center',
   marginLeft: 'auto',
-  marginRight: '0.7vw',
+  marginRight: '1.5vw',
   color: '#212121',
   cursor: 'pointer',
+}
+
+const plusIconStyle = {
+  marginTop: '0.1vw',
+  width: '1vw',
+  height: '1vw',
+  alignSelf: 'center',
+  marginRight: '-1.8vw',
+  color: '#212121',
+  cursor: 'pointer',
+  zIndex: 10,
 }
 
 interface TabProps {
@@ -37,6 +49,10 @@ const Tab = (props: TabProps) => {
           {props.isSpotlight && (
             <FontAwesomeIcon icon="xmark" style={xIconStyle} />
           )}
+          {props.isSpotlight && (
+            <FontAwesomeIcon icon="plus" style={plusIconStyle} />
+          )}
+          {!props.isSpotlight && <TabLine />}
         </TabBackground>
         {props.isSpotlight && <TabEdge />}
       </TabContainer>

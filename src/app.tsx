@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {
   faXmark,
+  faPlus,
   faArrowLeft,
   faArrowRight,
   faRotateRight,
@@ -17,6 +18,7 @@ import ExperienceSection from './components/experienceSection'
 
 library.add(
   faXmark,
+  faPlus,
   faArrowLeft,
   faArrowRight,
   faRotateRight,

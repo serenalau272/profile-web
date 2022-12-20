@@ -34,7 +34,7 @@ export const TabBackground = styled.div<TabProps>`
   background-color: ${(props) =>
     props.isSpotlight ? '#ffffff' : 'transparent'};
   border-radius: 0.5vw;
-  width: 9.5vw;
+  width: ${(props) => (props.isSpotlight ? '9.5vw' : '10vw')};
   height: 81%;
   position: relative;
   top: 19%;
@@ -59,4 +59,13 @@ export const TabTitle = styled.p`
   align-self: center;
   margin-left: 0.5vw;
   margin-top: 0.1vw;
+`
+export const TabLine = styled.div`
+  background-color: white;
+  width: 0.07vw;
+  height: 58%;
+  align-self: center;
+  margin-left: auto;
+  margin-right: -0.25vw;
+  z-index: 10;
 `

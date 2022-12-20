@@ -8,6 +8,8 @@ import KumbhSansSemiBold from './KumbhSans-SemiBold.ttf'
 
 import KumbhSansMedium from './KumbhSans-Medium.ttf'
 
+import KumbhSansBold from './KumbhSans-Bold.ttf'
+
 import PoppinsRegular from './Poppins-Regular.ttf'
 
 import PoppinsLight from './Poppins-Light.ttf'
@@ -30,6 +32,13 @@ const GlobalFonts = createGlobalStyle`
     }
 
     @font-face {
+        font-family: 'KumbhSans-Medium';
+        src: url(${KumbhSansMedium}) format('truetype');
+        font-weight: 200;
+        font-style: normal;
+    }
+
+    @font-face {
         font-family: 'KumbhSans-SemiBold';
         src: url(${KumbhSansSemiBold}) format('truetype');
         font-weight: 200;
@@ -37,8 +46,8 @@ const GlobalFonts = createGlobalStyle`
     }
 
     @font-face {
-        font-family: 'KumbhSans-Medium';
-        src: url(${KumbhSansMedium}) format('truetype');
+        font-family: 'KumbhSans-Bold';
+        src: url(${KumbhSansBold}) format('truetype');
         font-weight: 200;
         font-style: normal;
     }

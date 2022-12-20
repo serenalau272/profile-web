@@ -26,18 +26,19 @@ export const TabsContainer = styled.div`
   margin-left: -0.1%;
 `
 
-interface ControlBtnProps {
+interface CircleBtnProps {
   backgroundColor: string
   borderColor: string
 }
 
-export const CircleBtn = styled.div<ControlBtnProps>`
+export const CircleBtn = styled.div<CircleBtnProps>`
   background-color: ${(props) => props.backgroundColor};
   border: 0.05vw solid ${(props) => props.borderColor};
   width: 0.73vw;
   height: 0.73vw;
   border-radius: 5vw;
   align-self: center;
+  margin-top: 0.1vw;
   margin-right: 0.35vw;
   z-index: 10;
 `
@@ -62,7 +63,7 @@ export const SearchBar = styled.div`
 `
 
 export const Divider = styled.div`
-  background-color: #e7e7e7;
+  background-color: #dddddd;
   width: 100%;
   height: 0.07vw;
   margin-top: 1.4vw;

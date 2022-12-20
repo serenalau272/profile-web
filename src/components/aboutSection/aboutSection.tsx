@@ -1,17 +1,6 @@
 import styled from 'styled-components'
 
 export const AboutContainer = styled.div`
-  @media screen and (max-width: 768px) {
-    padding: 100px 0;
-  }
-`
-
-export const AboutScreen = styled.img`
-  width: 100%;
-  z-index: -1;
-`
-
-export const WindowContainer = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
@@ -22,24 +11,22 @@ export const WindowContainer = styled.div`
 `
 
 export const Column1 = styled.div`
-  order: 1;
   width: 38%;
   height: 100%;
   position: relative;
 `
 
 export const Column2 = styled.div`
-  order 2;
   width: 70%;
   height: 100%;
-  padding: 2.5vw 1vw 0vw;
+  padding: 2.5vw 3vw 0vw 0.2vw;
   display: flex;
   flex-direction: column;
 `
 
 export const ProfileImg = styled.img`
-  width: 85%;
-  top: 8%;
+  width: 80%;
+  top: 9.8%;
   left: 10%;
   z-index: 1;
   position: relative;
@@ -47,12 +34,12 @@ export const ProfileImg = styled.img`
 
 export const ProfileBg = styled.div`
   background: #f4ddb3;
-  width: 86%;
-  height: 82%;
-  left: 13%;
-  top: 12%;
+  width: 80.8%;
+  height: 79.5%;
+  left: 12.8%;
+  top: 11%;
   z-index: 0;
-  border-radius: 2.5%;
+  border-radius: 1.8%;
   align-self: center;
   position: absolute;
 `
@@ -65,29 +52,20 @@ export const AboutP = styled.p`
   text-align: left;
   justify-self: stretch;
   align-self: start;
-  margin-left: 15px;
-
-  @media screen and (max-width: 768px) {
-    font-size: 18px;
-  }
-
-  @media screen and (max-width: 480px) {
-    font-size: 10px;
-  }
+  margin-left: 0vw;
 `
 
 export const IconsWrapper = styled.div`
-  height: 20%;
   justify-self: stretch;
   align-self: start;
-  margin-top: 1.8vh;
-  margin-left: 12px;
+  margin-top: 0.7vw;
+  margin-left: -0.2vw;
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: 0.7vw;
 `
 
 export const LinkIcon = styled.div`
-  font-size: 3vw;
+  font-size: 2.5vw;
   cursor: pointer;
 `

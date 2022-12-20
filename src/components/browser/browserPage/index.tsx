@@ -41,7 +41,7 @@ const EllipsisIconStyle = {
   color: '#5F5F5F',
   height: '1.3vw',
   alignSelf: 'center',
-  marginLeft: '1vw',
+  marginLeft: '1.2vw',
 }
 
 interface BrowserPageProps {
@@ -76,6 +76,9 @@ const BrowserPage = (props: BrowserPageProps) => {
                 tabTitle={Section.Experience}
                 isSpotlight={props.section === Section.Experience}
               />
+            )}
+            {props.section === Section.Contact && (
+              <Tab tabTitle={Section.Contact} isSpotlight={true} />
             )}
           </TabsContainer>
         </TabBar>

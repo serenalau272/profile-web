@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const HeroH1 = styled.h1`
   color: #ffffff;
@@ -12,22 +12,7 @@ export const HeroH1 = styled.h1`
   width: 80%;
   height: 100%;
   padding-top: 1.9vw;
-
-  @media screen and (max-width: 1500px) {
-    font-size: 2.5vw;
-    padding-top: 2.1vw;
-  }
-
-  @media screen and (max-width: 768px) {
-    font-size: 40px;
-  }
-
-  @media screen and (max-width: 480px) {
-    font-size: 32px;
-    color: #ffffff;
-    text-shadow: 0px 4px 2px #553b15;
-  }
-`;
+`
 
 export const HeroH2 = styled.h2`
   color: #6a6a6a;
@@ -46,7 +31,7 @@ export const HeroH2 = styled.h2`
   @media screen and (max-width: 1500px) {
     margin-right: 19vw;
   }
-`;
+`
 
 export const HeroContainer = styled.div`
   background: #a4dbd8;
@@ -57,14 +42,14 @@ export const HeroContainer = styled.div`
   height: 100vh;
   position: relative;
   z-index: 1;
-`;
+`
 
 export const HeroDesk = styled.img`
   order: 1;
   align-self: center;
   width: 93vw;
   z-index: 10;
-`;
+`
 
 export const HeroDeskItemsContainer = styled.div`
   order: 2;
@@ -74,7 +59,7 @@ export const HeroDeskItemsContainer = styled.div`
   justify-content: center;
   align-items: flex-end;
   margin-left: -7vw;
-`;
+`
 
 export const HeroComputer = styled.img`
   order: 4;
@@ -84,7 +69,7 @@ export const HeroComputer = styled.img`
   @media screen and (max-width: 1500px) {
     width: 34vw;
   }
-`;
+`
 
 export const HeroLamp = styled.img`
   order: 1;
@@ -92,14 +77,14 @@ export const HeroLamp = styled.img`
   margin-bottom: -1vw;
   margin-right: 6vw;
   margin-left: -3vw;
-`;
+`
 
 export const HeroPencils = styled.img`
   order: 2;
   width: 4vw;
   margin-right: -3vw;
   z-index: 9;
-`;
+`
 
 export const HeroNotePad = styled.img`
   order: 3;
@@ -107,14 +92,14 @@ export const HeroNotePad = styled.img`
   margin-bottom: -0.2vw;
   margin-left: 2vw;
   z-index: 11;
-`;
+`
 
 export const HeroMouse = styled.img`
   order: 6;
   width: 4.8vw;
   margin-left: 8vw;
   margin-bottom: -0.5vw;
-`;
+`
 
 export const HeroScreenContainer = styled.div`
   order: 5;
@@ -130,7 +115,7 @@ export const HeroScreenContainer = styled.div`
     margin-left: -33.2vw;
     margin-bottom: 8.6vw;
   }
-`;
+`
 
 export const HeroShelf = styled.div`
   order: 3;
@@ -142,7 +127,7 @@ export const HeroShelf = styled.div`
   width: 28vw;
   border-radius: 3px;
   min-height: 1.5vw;
-`;
+`
 
 export const HeroShelfContainer = styled.div`
   order: 4;
@@ -152,14 +137,14 @@ export const HeroShelfContainer = styled.div`
   min-height: 11vw;
   display: flex;
   flex-direction: row;
-`;
+`
 
 export const HeroBooks = styled.img`
   order: 1;
   align-self: flex-end;
   margin-left: 2.5vw;
   width: 7vw;
-`;
+`
 
 export const HeroClock = styled.img`
   order: 2;
@@ -168,7 +153,7 @@ export const HeroClock = styled.img`
   margin-bottom: -0.2vw;
   width: 7vw;
   z-index: 1;
-`;
+`
 
 export const HeroBibleVerse = styled.img`
   order: 3;
@@ -176,11 +161,11 @@ export const HeroBibleVerse = styled.img`
   margin-left: -1.5vw;
   height: 11vw;
   cursor: pointer;
-`;
+`
 
 export const HeroRubiks = styled.img`
   order: 4;
   align-self: flex-end;
   margin-left: -1.5vw;
   width: 2.8vw;
-`;
+`

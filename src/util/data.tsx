@@ -59,7 +59,7 @@ export const data: ProfileWebData = {
       title: 'UADS Project - WDCC',
       role: 'Fullstack developer',
       description:
-        'Working closely with the University of Auckland Dessert Society (UADS) to develop an app that allows users to register and pay for events.',
+        'Worked closely with the University of Auckland Dessert Society (UADS) to develop an app that allows users to register and pay for events.',
       tech: 'MongoDB, Express, React, Node, TypeScript',
       image: {
         src: uads,

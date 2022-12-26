@@ -8,6 +8,7 @@ import {
   faArrowRight,
   faRotateRight,
   faEllipsisVertical,
+  faLayerGroup,
 } from '@fortawesome/free-solid-svg-icons'
 import { faStar } from '@fortawesome/free-regular-svg-icons'
 import GlobalStyle from './styling/global'
@@ -24,6 +25,7 @@ library.add(
   faRotateRight,
   faStar,
   faEllipsisVertical,
+  faLayerGroup,
 )
 
 const App: React.FC = () => {

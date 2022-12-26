@@ -42,7 +42,7 @@ export const OverlayBg = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   text-align: left;
-  padding: 1.25vw 1.25vw;
+  padding: 1.25vw 1.25vw 0.9vw;
   background-color: rgba(0, 0, 0, 0.86);
   color: white;
   height: 15vw;
@@ -83,4 +83,20 @@ export const OverlayDescription = styled.p`
   margin-top: 0.7vw;
   line-height: 1.2vw;
   letter-spacing: 0.01vw;
+`
+
+export const OverlayTechContainer = styled.div`
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: auto;
+`
+
+export const OverlayTech = styled.p`
+  font-family: 'Poppins-ExtraLight';
+  font-size: 0.75vw;
+  color: white;
+  margin-left: 0.4vw;
 `

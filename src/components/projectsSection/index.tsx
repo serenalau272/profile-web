@@ -9,12 +9,20 @@ import {
   OverlayTitle,
   OverlayRole,
   OverlayDescription,
+  OverlayTech,
+  OverlayTechContainer,
 } from './projectsSection'
 
 import BrowserPage from '../browser/browserPage'
 import { Section } from '../../util/enums/Section'
 import { Carousel } from '../carousel/carousel'
 import { data } from '../../util/data'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+const LayerGroupIconStyle = {
+  color: 'white',
+  height: '1vw',
+}
 
 const ProjectsSection = (): JSX.Element => {
   const loadProjectBoxes = () => {
@@ -35,6 +43,15 @@ const ProjectsSection = (): JSX.Element => {
             <OverlayDescription>
               {data.projects[count].description}
             </OverlayDescription>
+            {data.projects[count].tech && (
+              <OverlayTechContainer>
+                <FontAwesomeIcon
+                  icon="layer-group"
+                  style={LayerGroupIconStyle}
+                />
+                <OverlayTech>{data.projects[count].tech}</OverlayTech>
+              </OverlayTechContainer>
+            )}
           </OverlayBg>
         </ProjectBox>,
       )

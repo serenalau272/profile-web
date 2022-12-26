@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 export const ExperienceContainer = styled.div`
-  /* padding: 1vw 2.4vw 1vw 2.4vw;
-  overflow-x: auto; */
+  padding: 1vw 2.4vw 1vw 2.4vw;
+  overflow-x: auto;
 `
 
 export const ExperienceTitle = styled.p`

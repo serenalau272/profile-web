@@ -12,14 +12,14 @@ import { Section } from '../../util/enums/Section'
 const ExperienceSection = () => {
   return (
     <>
-      <ExperienceContainer>
+      {/* <ExperienceContainer>
         <ExperienceScreen src={projTab} />
-      </ExperienceContainer>
-      {/* <BrowserPage section={Section.Experience}>
+      </ExperienceContainer> */}
+      <BrowserPage section={Section.Experience}>
         <ExperienceContainer>
           <ExperienceTitle>{Section.Experience}</ExperienceTitle>
         </ExperienceContainer>
-      </BrowserPage> */}
+      </BrowserPage>
     </>
   )
 }

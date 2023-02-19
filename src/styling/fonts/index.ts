@@ -10,6 +10,8 @@ import KumbhSansMedium from './KumbhSans-Medium.ttf'
 
 import KumbhSansBold from './KumbhSans-Bold.ttf'
 
+import PoppinsBold from './Poppins-Bold.ttf'
+
 import PoppinsSemiBold from './Poppins-SemiBold.ttf'
 
 import PoppinsMedium from './Poppins-Medium.ttf'
@@ -54,6 +56,13 @@ const GlobalFonts = createGlobalStyle`
     @font-face {
         font-family: 'KumbhSans-Bold';
         src: url(${KumbhSansBold}) format('truetype');
+        font-weight: 200;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Poppins-Bold';
+        src: url(${PoppinsBold}) format('truetype');
         font-weight: 200;
         font-style: normal;
     }

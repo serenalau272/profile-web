@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 interface SectionIndicatorProps {
-  isSelected?: boolean;
-  width: string;
+  isSelected?: boolean
+  width: string
 }
 
 export const NavBarItemContainer = styled.div<SectionIndicatorProps>`
@@ -14,14 +14,14 @@ export const NavBarItemContainer = styled.div<SectionIndicatorProps>`
   align-items: center;
   margin-top: 0.4vw;
   cursor: pointer;
-`;
+`
 
 export const SectionTitle = styled.text`
-  font-family: "KumbhSans-Medium";
+  font-family: 'KumbhSans-Medium';
   color: #5c5c5c;
   font-size: 1.7vw;
   z-index: 1;
-`;
+`
 
 export const SectionIndicator = styled.div<SectionIndicatorProps>`
   background-color: #eca96d;
@@ -29,5 +29,5 @@ export const SectionIndicator = styled.div<SectionIndicatorProps>`
   height: 0.8vw;
   margin-top: -0.7vw;
   margin-left: 0.8vw;
-  display: ${(props) => (props.isSelected ? "" : "none")};
-`;
+  display: ${(props) => (props.isSelected ? '' : 'none')};
+`

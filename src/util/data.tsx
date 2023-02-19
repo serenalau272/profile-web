@@ -16,12 +16,22 @@ interface ProjectData {
   }
 }
 
+interface ExperienceData {
+  company: string
+  location: string
+  date: string
+  role: string
+  primaryColor: string
+  secondaryColor: string
+}
+
 interface ProfileWebData {
   about: {
     aboutText: string
     profileImg: string
   }
   projects: ProjectData[]
+  experience: ExperienceData[]
 }
 
 export const data: ProfileWebData = {
@@ -48,7 +58,7 @@ export const data: ProfileWebData = {
       title: 'Nolo',
       role: 'Fullstack developer and graphic designer',
       description: '',
-      tech: '',
+      tech: 'Android Toolkit, Java',
       image: {
         src: nolo,
         isLandscape: true,
@@ -60,7 +70,7 @@ export const data: ProfileWebData = {
       role: 'Fullstack developer',
       description:
         'Worked closely with the University of Auckland Dessert Society (UADS) to develop an app that allows users to register and pay for events.',
-      tech: 'MongoDB, Express, React, Node, TypeScript',
+      tech: 'MongoDB, Express, React Native, TypeScript',
       image: {
         src: uads,
         isLandscape: false,
@@ -77,6 +87,40 @@ export const data: ProfileWebData = {
         src: noodle,
         isLandscape: true,
       },
+    },
+  ],
+  experience: [
+    {
+      company: 'Sandfield',
+      location: 'Auckland, NZ',
+      date: 'Jun 2022 - Present',
+      role: 'Developer Intern',
+      primaryColor: '#FBAC27',
+      secondaryColor: '#FFD900',
+    },
+    {
+      company: 'Xero',
+      location: 'Melbourne, AU',
+      date: 'Nov 2022 - Feb 2023',
+      role: 'Software Engineer Intern',
+      primaryColor: '#1AB4D7',
+      secondaryColor: '#5ADAF6',
+    },
+    {
+      company: 'Flipview',
+      location: 'Auckland, NZ',
+      date: 'Apr 2022 - Jul 2022',
+      role: 'System Analyst',
+      primaryColor: '#2FBEBD',
+      secondaryColor: '#4ED9D5',
+    },
+    {
+      company: 'Nintex',
+      location: 'Auckland, NZ',
+      date: 'Nov 2021 - Feb 2022',
+      role: 'Software Engineer Intern',
+      primaryColor: '#013871',
+      secondaryColor: '#FF6C00',
     },
   ],
 }

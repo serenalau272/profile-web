@@ -8,6 +8,7 @@ export const AboutContainer = styled.div`
   justify-content: center;
   align-items: center;
   z-index: 10;
+  background-color: #ebe4da;
 `
 
 export const Column1 = styled.div`
@@ -19,25 +20,25 @@ export const Column1 = styled.div`
 export const Column2 = styled.div`
   width: 70%;
   height: 100%;
-  padding: 2.5vw 3vw 0vw 0.2vw;
+  padding: min(5.5vw, 9vh) min(3vw, 2.9vh) 0vw min(0.5vw, 0.8vh);
   display: flex;
   flex-direction: column;
 `
 
 export const ProfileImg = styled.img`
-  width: 80%;
-  top: 9.8%;
+  width: min(22.3vw, 36.5vh);
+  top: 12%;
   left: 10%;
   z-index: 1;
   position: relative;
 `
 
 export const ProfileBg = styled.div`
-  background: #f4ddb3;
-  width: 80.8%;
-  height: 79.5%;
+  background: #a4dbd8;
+  width: min(22.5vw, 37.1vh);
+  height: min(23vw, 37.8vh);
   left: 12.8%;
-  top: 11%;
+  top: 13%;
   z-index: 0;
   border-radius: 1.8%;
   align-self: center;
@@ -46,9 +47,9 @@ export const ProfileBg = styled.div`
 
 export const AboutP = styled.p`
   color: #585858;
-  font-size: 1.4vw;
+  font-size: min(1.7vw, 2.8vh);
   font-family: 'KumbhSans-Light';
-  line-height: 2.3vw;
+  line-height: min(2.8vw, 4.6vh);
   text-align: left;
   justify-self: stretch;
   align-self: start;
@@ -58,14 +59,14 @@ export const AboutP = styled.p`
 export const IconsWrapper = styled.div`
   justify-self: stretch;
   align-self: start;
-  margin-top: 0.7vw;
+  margin-top: 2%;
   margin-left: -0.2vw;
   display: flex;
   flex-direction: row;
-  gap: 0.7vw;
+  gap: 6%;
 `
 
 export const LinkIcon = styled.div`
-  font-size: 2.5vw;
+  font-size: min(3.2vw, 5.3vh);
   cursor: pointer;
 `

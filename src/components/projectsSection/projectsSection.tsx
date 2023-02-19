@@ -18,8 +18,8 @@ export const ProjectBox = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 15vw;
-  width: 19.62vw;
+  height: 17vw;
+  width: 22vw;
   background-color: #494949;
   border-radius: 0.8vw;
 `
@@ -45,8 +45,8 @@ export const OverlayBg = styled.div`
   padding: 1.25vw 1.25vw 0.9vw;
   background-color: rgba(0, 0, 0, 0.86);
   color: white;
-  height: 15vw;
-  width: 19.62vw;
+  height: 17vw;
+  width: 22vw;
   border-radius: 0.8vw;
   opacity: 0;
   transition: 0.2s ease-in-out;
@@ -70,7 +70,7 @@ export const OverlayTitle = styled.p`
 export const OverlayRole = styled.p`
   font-family: 'Poppins-Regular';
   font-style: italic;
-  font-size: 0.8vw;
+  font-size: 0.9vw;
   color: #ffd28e;
   line-height: 1vw;
   letter-spacing: 0.01vw;
@@ -78,10 +78,10 @@ export const OverlayRole = styled.p`
 
 export const OverlayDescription = styled.p`
   font-family: 'Poppins-Light';
-  font-size: 0.9vw;
+  font-size: 0.95vw;
   white-space: pre-wrap;
   margin-top: 0.7vw;
-  line-height: 1.2vw;
+  line-height: 1.5vw;
   letter-spacing: 0.01vw;
 `
 

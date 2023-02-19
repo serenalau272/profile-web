@@ -13,25 +13,25 @@ export const InfoContainer = styled.div`
 
 export const InfoComputer = styled.img`
   order: 1;
-  width: 77vw;
-  height: 49vw;
+  width: min(93vw, calc(11 / 7 * 98vh));
+  height: min(98vh, calc(7 / 11 * 93vw));
   margin-top: auto;
   margin-right: 5vw;
 `
 
 export const SectionContainer = styled.div`
   position: absolute;
-  width: 64.5vw;
-  height: 30.5vw;
-  margin-left: 0.8vw;
-  bottom: 14.8vw;
+  width: min(79.5vw, calc(129 / 61 * 62vh));
+  height: min(62vh, calc(61 / 129 * 79.5vw));
+  margin-left: min(3vh, 2vw);
+  bottom: min(28.8vh, 17.6vw);
 `
 
 export const NavBar = styled.div`
   position: absolute;
-  width: 50vw;
-  height: 4.5vw;
-  bottom: 5.5vw;
+  /* width: 50vw; */
+  /* height: 4.5vw; */
+  bottom: min(11vh, 6.6vw);
   display: flex;
   flex-direction: row;
   justify-content: center;

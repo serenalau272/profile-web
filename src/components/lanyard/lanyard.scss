@@ -1,0 +1,95 @@
+.lanyard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0;
+
+  &.shorter {
+    margin-top: -2.5vw;
+  }
+}
+
+.lanyard-band {
+  width: 2.8vw;
+  // height: #{'max(13vh, 7vw)'};
+  height: 6.5vw;
+  border-radius: 0.3vw;
+  z-index: 2;
+}
+
+.lanyard-ring {
+  border: 0.2vw solid white;
+  width: 3.8vw;
+  height: 1.9vw;
+  border-bottom-left-radius: 5vw;
+  border-bottom-right-radius: 5vw;
+  border-top-left-radius: 1vw;
+  border-top-right-radius: 1vw;
+  margin-top: -0.2vw;
+  z-index: 1;
+}
+
+.lanyard-clip {
+  background-color: #8f8f8f;
+  width: 1.6vw;
+  height: 2vw;
+  margin-top: -0.1vw;
+}
+
+.lanyard-arc {
+}
+
+.lanyard-badge-bg {
+}
+
+.lanyard-badge {
+  cursor: pointer;
+  border: 0.4vw solid #f2eee7;
+  border-radius: 0.8vw;
+  width: 13vw;
+  // height: #{'max(29vh, 16vw)'};
+  height: 15vw;
+  display: flex;
+  flex-direction: column;
+
+  & .company {
+    color: white;
+    font-size: 1.9vw;
+    font-family: 'KumbhSans-SemiBold';
+    text-align: center;
+    margin-top: 1.7vw;
+  }
+
+  & .location {
+    color: white;
+    opacity: 0.7;
+    font-size: 1.1vw;
+    font-family: 'KumbhSans-Medium';
+    text-align: center;
+  }
+
+  & .role {
+    color: white;
+    padding: 0 1vw;
+    opacity: 0.9;
+    font-size: 0.9vw;
+    line-height: 1.2vw;
+    font-family: 'KumbhSans-SemiBold';
+    text-align: center;
+    margin-top: 3vw;
+  }
+
+  & .footer {
+    margin-top: auto;
+    height: 2.7vw;
+    width: 100%;
+    background-color: #4d4d4d;
+    color: #fff8ed;
+    line-height: 2.7vw;
+    font-size: 0.95vw;
+    font-family: 'KumbhSans-Medium';
+    text-align: center;
+    border-bottom-right-radius: 0.4vw;
+    border-bottom-left-radius: 0.4vw;
+  }
+}

@@ -70,7 +70,7 @@ const ProjectsSection = (): JSX.Element => {
       <BrowserPage section={Section.Projects}>
         <ProjectsContainer>
           <ProjectsTitle>{Section.Projects}</ProjectsTitle>
-          <Carousel config={carouselConfig} position={{ marginTop: '1vw' }}>
+          <Carousel config={carouselConfig} position={{ marginTop: '1.5vw' }}>
             {loadProjectBoxes()}
           </Carousel>
         </ProjectsContainer>

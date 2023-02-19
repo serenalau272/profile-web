@@ -4,9 +4,10 @@ export const BrowserContainer = styled.div`
   background-color: white;
   width: 100%;
   height: 100%;
+  max-height: 100%;
   display: flex;
   flex-direction: column;
-  flex: 0 1 auto;
+  /* flex: 0 1 auto; */
 `
 export const TabBar = styled.div`
   background-color: #eeeeee;
@@ -52,7 +53,7 @@ export const ControlsBar = styled.div`
 
 export const SearchBar = styled.div`
   background-color: #e7e7e7;
-  width: 84.5%;
+  width: 85.5%;
   height: 100%;
   margin-left: 1vw;
   border-radius: 10vw;
@@ -70,6 +71,7 @@ export const Divider = styled.div`
 `
 
 export const ContentContainer = styled.div`
-  widht: 100%;
-  flex: 1 1 auto;
+  width: 100%;
+  height: 100%;
+  /* flex: 1 1 auto; */
 `
